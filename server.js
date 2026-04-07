@@ -179,6 +179,18 @@ app.get("/api/skills", (req, res) => {
   });
 });
 
+app.get("/api/get-graph-counts", (req, res) => {
+  res.json({
+    data: {
+      last5MinCount: 10,
+      dailyData: [],
+      countryData: [],
+      monthData: [],
+    },
+    totalCount: 1000,
+  });
+});
+
 // Featured Jobseekers
 app.get("/api/jobseekers/featured", (req, res) => {
   res.json({
