@@ -27,6 +27,10 @@ app.use((req, res, next) => {
 
 app.use(auditLoggerMiddleware);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 // ✅ FIRST: custom routes (VERY IMPORTANT)
 app.get("/api/get-all-consulting-solutions", (req, res) => {
   res.json({ data: [] });
